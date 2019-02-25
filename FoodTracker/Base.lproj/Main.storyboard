@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-s8-Lxb">
-                                <rect key="frame" x="27" y="85" width="320" height="404"/>
+                                <rect key="frame" x="27" y="85" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfK-IG-Vw9">
@@ -95,8 +95,8 @@
                                             <outletCollection property="gestureRecognizers" destination="jff-Jb-Arz" appends="YES" id="cyo-r0-et6"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-dK-6Iv" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="44" y="364" width="232" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-dK-6Iv" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="364" width="232" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                 <size key="value" width="40" height="40"/>
@@ -114,15 +114,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="UdX-9Z-e2a">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rHL-aG-Fx1"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vgR-N1-6C3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vgR-N1-6C3">
+                            <connections>
+                                <segue destination="QO8-5C-vaS" kind="unwind" unwindAction="unwindToMealListWithSender:" id="sHm-J4-rEK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="SfK-IG-Vw9" id="n4a-Q4-hqe"/>
                         <outlet property="photoImageView" destination="3hf-0K-UA6" id="lll-B6-JCi"/>
                         <outlet property="ratingControl" destination="2Lh-dK-6Iv" id="6Ed-eN-HCh"/>
+                        <outlet property="saveButton" destination="vgR-N1-6C3" id="RPP-uA-6vE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="QO8-5C-vaS" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="jff-Jb-Arz">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="hfN-Ae-ZUH"/>
