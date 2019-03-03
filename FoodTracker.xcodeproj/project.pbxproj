@@ -44,6 +44,7 @@
 		BF1C6F7821FBBE4200163AEB /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		BF1C6F7A21FBBE4200163AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF1C6F83220E24A600163AEB /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		BF6D8EB5222C407700965C11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		BF1C6F5721FBBE3F00163AEB = {
 			isa = PBXGroup;
 			children = (
+				BF6D8EB5222C407700965C11 /* README.md */,
 				BF1C6F6221FBBE4000163AEB /* FoodTracker */,
 				BF1C6F7721FBBE4200163AEB /* FoodTrackerTests */,
 				BF1C6F6121FBBE4000163AEB /* Products */,
